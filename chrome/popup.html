@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiChoice AI</title>
+    <style>
+        body {
+            font-family: "Oswald", sans-serif;
+            background-color: #0e0e0e;
+            padding: 20px;
+            margin: 0;
+            width: 300px;
+            height: 250px;
+            box-sizing: border-box;
+            color: #ffffff;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #cccccc;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #0e0e0e;
+            color: #ffffff;
+        }
+        input[type="password"]::placeholder {
+            color: #cccccc;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #EF8B1C;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            margin-right: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        button#remove-api-key {
+            background-color: #dc3545;
+        }
+        #message {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            display: none;
+            border: 1px solid #cccccc;
+            color: #ffffff;
+        }
+        #message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;  
+        }
+        #message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <h1>OptiChoice AI</h1>
+    <div>
+        <label for="api-key">Enter your API Key:</label>
+        <input type="password" id="api-key" placeholder="Your API Key">
+        <button id="save-api-key">Save API Key</button>
+        <button id="remove-api-key" style="display: none;">Remove API Key</button>
+    </div>
+    <div id="message"></div>
+    <button id="solve" style="display: none;">Solve MCQs</button>
+    <script src="popup.js"></script>
+</body>
+</html>

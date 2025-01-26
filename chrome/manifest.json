@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "OptiChoice AI",
+    "version": "1.0",
+    "description": "Solves Google Form MCQs using Google Gemini API",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "host_permissions": ["https://docs.google.com/forms/*", "http://docs.google.com/forms/*"],
+    "icons": {
+      "32": "icon.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "32": "icon.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://docs.google.com/forms/*", "http://docs.google.com/forms/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
